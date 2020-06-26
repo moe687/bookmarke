@@ -3,7 +3,6 @@ const urlIput = document.getElementById("siteUrl");
 const submitBtn = document.getElementById("submit-btn");
 const list = document.getElementById("bookmarksResults");
 
-/////////////////////////////////////////////////////
 
 let dataBomba =
   localStorage.getItem("dataBomba") !== null
@@ -14,7 +13,6 @@ function setStorage() {
   localStorage.setItem("dataBomba", JSON.stringify(dataBomba));
 }
 
-/////////////////////////////////////////////////
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -40,22 +38,12 @@ submitBtn.addEventListener("click", (e) => {
   }
 });
 
-//////////////////////////////
+
 function genrateId() {
   return Math.floor(Math.random() * 100000000);
 }
 
-/////////////////////////////////////////
-// function results(data) {
-//   let div = document.createElement("div");
 
-//   div.innerHTML = `
-//          ${data.siteValue} ${data.urlValue}
-//           <button class="delete-btn" onclick="removeTransaction(${data.id})">x</button>`;
-//   list.appendChild(div);
-// }
-
-/////////////////////////////////////////////////////
 function removeData(id) {
   dataBomba = dataBomba.filter((data) => data.id !== id);
 
@@ -64,7 +52,7 @@ function removeData(id) {
   init();
 }
 
-/////////////////////////////////////////////////
+
 
 function init() {
   list.innerHTML = "";
@@ -73,18 +61,10 @@ function init() {
 }
 init();
 
-//////////////////////////////////////////////////
 
-// const bookMarks = {
-//   name: siteInput.value,
-//   url: urlIput.value,
-// };
 
 function addDomEl(data) {
-  // for (var i = 0; i < data.length; i++) {
-  //   const name = data[i].name;
-  //   const url = data[i].url;
-  //   const id = data[i].id;
+  
 
   let div = document.createElement("div");
 
