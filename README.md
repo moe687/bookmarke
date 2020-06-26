@@ -1,5 +1,5 @@
 
-a Javascript application i fetched data from api
+a Javascript application that enables you to add your favorite books
 
 What I Learned 
 
